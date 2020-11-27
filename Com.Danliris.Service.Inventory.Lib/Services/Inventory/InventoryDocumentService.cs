@@ -106,6 +106,10 @@ namespace Com.Danliris.Service.Inventory.Lib.Services.Inventory
                 StorageCode = viewModel.storageCode,
                 StorageId = Convert.ToInt32(viewModel.storageId),
                 StorageName = viewModel.storageName,
+                BuyerCode = viewModel.buyerCode,
+                BuyerId = Convert.ToInt32(viewModel.buyerId),
+                BuyerName = viewModel.buyerName,
+                NoPOBuyer = viewModel.noPOBuyer,
                 Date = viewModel.date,
                 Type = viewModel.type,
                 Items = viewModel.items.Select(item => new InventoryDocumentItem()
@@ -144,6 +148,10 @@ namespace Com.Danliris.Service.Inventory.Lib.Services.Inventory
                 storageCode = model.StorageCode,
                 storageId = model.StorageId,
                 storageName = model.StorageName,
+                buyerCode = model.BuyerCode,
+                buyerId = model.BuyerId,
+                buyerName = model.BuyerName,
+                noPOBuyer = model.NoPOBuyer,
                 date = model.Date,
                 type = model.Type,
                 items = model.Items.Select(item => new InventoryDocumentItemViewModel()
