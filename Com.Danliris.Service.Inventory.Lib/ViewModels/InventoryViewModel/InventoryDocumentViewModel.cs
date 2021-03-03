@@ -14,7 +14,11 @@ namespace Com.Danliris.Service.Inventory.Lib.ViewModels.InventoryViewModel
         public DateTimeOffset date { get; set; }
         public string referenceNo { get; set; }
         public string referenceType { get; set; }
+        public string noPOBuyer { get; set; }
         public string type { get; set; }
+        public int buyerId { get; set; }
+        public string buyerCode { get; set; }
+        public string buyerName { get; set; }
         public int storageId { get; set; }
         public string storageCode { get; set; }
         public string storageName { get; set; }
@@ -25,6 +29,8 @@ namespace Com.Danliris.Service.Inventory.Lib.ViewModels.InventoryViewModel
         {
             if (storageId==0)
                 yield return new ValidationResult("Gudang harus diisi", new List<string> { "storageId" });
+            if (buyerId == 0)
+                yield return new ValidationResult("Buyer harus diisi", new List<string> { "storageId" });
             if (this.referenceNo == null || string.IsNullOrWhiteSpace(this.referenceNo))
                 yield return new ValidationResult("No. referensi harus diisi", new List<string> { "referenceNo" });
             if (this.referenceType == null || string.IsNullOrWhiteSpace(this.referenceType))

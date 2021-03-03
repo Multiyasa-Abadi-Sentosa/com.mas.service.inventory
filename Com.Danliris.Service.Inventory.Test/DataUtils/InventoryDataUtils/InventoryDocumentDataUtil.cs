@@ -26,6 +26,10 @@ namespace Com.Danliris.Service.Inventory.Test.DataUtils.InventoryDataUtils
                 StorageName = "Test",
                 ReferenceNo = "Test001",
                 ReferenceType = "TestType",
+                BuyerCode = "test01",
+                BuyerId = 2,
+                BuyerName = "Test",
+                NoPOBuyer = "Test",
                 Type = "IN",
                 Remark = "Remark",
                 Items = new List<InventoryDocumentItem> { new InventoryDocumentItem(){
